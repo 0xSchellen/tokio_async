@@ -1,0 +1,43 @@
+// // To use .lines() before, just like last time
+// //use reqwest;
+// use std::io::BufRead;
+// use mini_redis::{client};
+// use tokio::net::TcpListener;
+// use std::collections::HashMap;
+// use std::sync::{Arc, Mutex};
+
+// // We'll return _some_ kind of an error
+// #[tokio::main]
+// async fn main() -> Result<(), Box<dyn std::error::Error>> {
+
+//     // CSV data reading and Hashmap file building
+//     // Open a connection to the mini-redis address.
+
+//     // Open the file for input - CSV header "Address,Value"
+//     let file = std::fs::File::open("eth_addresses.csv")?;
+//     // Make a buffered version so we can read lines
+//     let buffile = std::io::BufReader::new(file);
+
+//     // Read File and Load Hashmap data
+//     let mut line_count: i32 = 0;
+//     for line in buffile.lines() {
+//         line_count = line_count + 1;
+//         // Error handling on reading the lines in the file
+//         let line = line?;
+//         let split: Vec<&str> = line.split(',').collect();
+//         let address = split[0];
+//         let balance = split[1];        
+//         println!("{:?} {:?} {:?}", line_count, address, balance);
+//     }
+
+//     // Create a client connection so we can make requests
+//     let mut client = client::connect("127.0.0.1:6379").await?;
+//     println!("Client connection at: 127.0.0.1:6379");
+//     // Serving the Hashmap data
+//     // Make a request and send it, getting a response
+//     // let resp = client.get(&line).send()?;
+//     // // Print the status code
+//     // println!("{},{}", line, resp.status().as_u16());
+    
+//     Ok(())
+// 

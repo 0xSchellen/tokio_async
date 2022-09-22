@@ -1,0 +1,6 @@
+https://tokio.rs/tokio/tutorial
+
+
+Redis
+cli-command
+awk -F ',' 'FNR > 1 && $1 && $2 {printf("SET %s %s\n",$1,$2)}'  eth_addresses.csv 

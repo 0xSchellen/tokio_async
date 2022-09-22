@@ -1,0 +1,11 @@
+delete@git-repo  /c/remove/repository (main-branch)
+$ rm -fr .git
+$ rm -r <directory>
+
+https://github.com/tokio-rs/tokio/tree/master/examples
+
+redis = { version = "0.21.5", features = ["tokio-comp"] }
+
+
+
+
